@@ -1,0 +1,44 @@
+.hero {
+    @include small-top-padding();
+    @include small-bottom-padding();
+    background-color: var(--wp--custom--color--grey--1000);
+    margin-bottom: 0;
+    position: relative;
+
+    &__container {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        /* Plus side paddings. */
+        max-width: calc(var(--wp--custom--width--container-wide) + var(--side-padding) * 2);
+        min-height: 20rem;
+
+        @include media-min(medium) {
+            min-height: 30rem;
+        }
+    }
+
+    &__content {
+        color: var(--wp--custom--color--neutral--white);
+        max-width: var(--wp--custom--width--container-medium);
+        position: relative;
+        z-index: 10;
+    }
+
+    &__image {
+        margin: 0;
+    }
+}
+
+.hero h1,
+.hero h2 {
+    color: var(--wp--custom--color--neutral--white);
+}
+
+.hero a {
+    color: inherit;
+}
+
+.content-area > .hero:first-child {
+    margin-top: 0;
+}

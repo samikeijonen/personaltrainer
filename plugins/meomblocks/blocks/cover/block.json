@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "meomblocks/cover",
+	"title": "Cover",
+	"category": "meomblocks",
+	"icon": "align-pull-right",
+	"description": "Content with background image.",
+	"keywords": [ "cover", "header" ],
+	"textdomain": "meomblocks",
+	"attributes": {
+		"image": {
+			"type": "object"
+		}
+	}
+}

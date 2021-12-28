@@ -1,0 +1,11 @@
+body {
+    --side-padding: var(--wp--custom--spacing--2);
+
+    @include media-min(medium) {
+        --side-padding: var(--wp--custom--spacing--4);
+    }
+
+    @include media-min(navigation) {
+        --side-padding: var(--wp--custom--spacing--6);
+    }
+}

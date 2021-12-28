@@ -1,0 +1,33 @@
+.site-footer {
+    @include default-top-padding();
+    @include default-bottom-padding();
+
+    background-color: var(--wp--custom--color--grey--200);
+}
+
+.site-footer__text {
+    @include font-size(16);
+}
+
+.site-footer__text h2 {
+    @include font-size(18);
+}
+
+.site-footer__text ul {
+    @include reset-list();
+}
+
+.site-footer__text ul a {
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.site-footer__wave {
+    position: relative;
+    top: 1rem;
+}

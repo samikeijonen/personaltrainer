@@ -1,0 +1,27 @@
+{
+    "category": {
+        "name": "MEOM-lohkot",
+        "slug": "meomblocks"
+    },
+    "blocks": [
+        {
+            "slug": "hero"
+        },
+        {
+            "slug": "image-and-text"
+        },
+        {
+            "slug": "latest-posts"
+        },
+        {
+            "slug": "social-links"
+        },
+        {
+            "slug": "cover"
+        },
+        {
+            "slug": "group"
+        }
+    ],
+    "acf_blocks": {}
+}

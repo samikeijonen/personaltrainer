@@ -1,0 +1,69 @@
+// Default margins for most common elements if they happen to be outside of the content.
+// Default top margin between elements in the content.
+.content-area > * + *,
+.top-margin > * + *,
+.wp-block-column > * + *,
+.group > * + *,
+// For editor.
+.is-root-container > * + * {
+    margin-bottom: 0;
+    margin-top: var(--wp--custom--spacing--4);
+}
+
+.top-margin--xl > * + * {
+    margin-top: var(--wp--custom--spacing--6);
+}
+
+.top-margin--md > * + * {
+    margin-top: var(--wp--custom--spacing--3);
+}
+
+.top-margin--sm > * + * {
+    margin-top: var(--wp--custom--spacing--2);
+}
+
+.content-area > {
+    :first-child {
+        @include default-top-margin();
+    }
+
+    :last-child {
+        @include default-bottom-margin();
+    }
+
+    :last-child.has-background,
+    :last-child.image-and-text,
+    :last-child.social-links {
+        margin-bottom: 0;
+    }
+}
+
+.content-area > h2,
+.content-area > h3,
+// For editor.
+.is-root-container > h2,
+.is-root-container > h3 {
+    margin-top: var(--wp--custom--spacing--6);
+}
+
+// Helper class for unifying space aroud modules
+.content-row,
+.group,
+// Next element top margin inside the content area.
+.content-area .content-row + *,
+.content-area .group + * {
+    @include default-top-margin();
+}
+
+// Set all alignfull elements margin-top to zero, if they are first block.
+.content-area > .alignfull:first-child,
+.content-area .has-background + .has-background,
+.content-area .has-background + .image-and-text,
+.content-area .image-and-text + .has-background {
+    margin-top: 0;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}

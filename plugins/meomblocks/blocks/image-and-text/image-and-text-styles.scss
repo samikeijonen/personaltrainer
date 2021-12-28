@@ -1,0 +1,50 @@
+@import "../../style-imports/theme-imports";
+
+.image-and-text {
+    &__container {
+        @include media-min(medium) {
+            align-items: center;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        margin: 0;
+
+        img {
+            @include media-min(medium) {
+                height: 100%;
+                min-height: 30rem;
+                object-fit: cover;
+                width: 100%;
+            }
+
+            @include media-min(medium-large) {
+                min-height: 38rem;
+            }
+        }
+    }
+
+    &__content {
+        padding-bottom: var(--wp--custom--spacing--6);
+        padding-top: var(--wp--custom--spacing--6);
+    }
+
+    &--position-right {
+        @include media-min(medium) {
+            .image-and-text__image {
+                order: 2;
+            }
+
+            .image-and-text__content {
+                order: 1;
+            }
+        }
+    }
+}
+
+.image-and-text + .image-and-text,
+.image-and-text + .has-background,
+.hero + .image-and-text {
+    margin-top: 0;
+}

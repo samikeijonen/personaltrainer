@@ -1,0 +1,9 @@
+{
+    "apiVersion": 2,
+    "name": "meomblocks/latest-posts",
+    "title": "Latest posts",
+    "category": "meomblocks",
+    "icon": "list-view",
+    "keywords": ["latest", "posts", "meom"],
+    "attributes": {}
+}

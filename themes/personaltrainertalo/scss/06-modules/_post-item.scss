@@ -1,0 +1,25 @@
+.post-item {
+    position: relative;
+
+    a {
+        &::after {
+            bottom: 0;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+        }
+    }
+}
+
+.post-item__fig {
+    margin: 0;
+}
+
+.post-item__content {
+    padding-top: var(--wp--custom--spacing--4);
+    text-align: center;
+}

@@ -1,0 +1,213 @@
+@include media(navigation) {
+    .is-overflow-hidden.is-site-nav-opened {
+        overflow: hidden;
+    }
+}
+
+.site-nav__items {
+    @include reset-list();
+    margin-top: 0;
+
+    @include media(navigation) {
+        background-color: var(--wp--custom--color--grey--200);
+        display: none;
+        text-align: center;
+
+        &.is-opened {
+            bottom: 0;
+            display: block;
+            left: 0;
+            overflow-x: auto;
+            padding: var(--wp--custom--spacing--16) var(--wp--custom--spacing--2) var(--wp--custom--spacing--2);
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 100;
+        }
+    }
+
+    @include media-min(navigation) {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.site-nav__items > .menu-item {
+    position: relative;
+
+    @include media-min(navigation) {
+        margin-right: var(--wp--custom--spacing--4);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.site-nav__items a {
+    @include font-size(16);
+    color: var(--wp--custom--color--grey--700);
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    padding: var(--wp--custom--spacing--2);
+    text-decoration: none;
+
+    @include media(navigation) {
+        display: block;
+    }
+
+    @include media-min(navigation) {
+        padding: var(--wp--custom--spacing--1) 0;
+    }
+
+    &:hover {
+        outline: 0;
+        text-decoration: underline;
+    }
+}
+
+.menu-item [aria-current="page"] {
+    text-decoration: underline;
+}
+
+.sub-menu {
+    @include reset-list();
+
+    a {
+        text-transform: none;
+    }
+
+    @include media-min(navigation) {
+        background-color: var(--wp--custom--color--grey--200);
+        left: -999em;
+        opacity: 0;
+        margin-top: 0;
+        min-width: 15rem;
+        padding: var(--wp--custom--spacing--2);
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        transform: translateY(-10%);
+        transition: transform var(--wp--custom--transition--3), opacity var(--wp--custom--transition--3);
+        visibility: hidden;
+        z-index: 300;
+
+        &.is-opened {
+            left: 0;
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+    }
+
+}
+
+.site-nav__toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: var(--wp--custom--color--grey--900);
+    line-height: 1;
+    padding: var(--wp--custom--spacing--1);
+    position: relative;
+    z-index: 120;
+
+    /* For some reason Firefox in WIN doesn't give good focus styles withouth this. */
+    &:focus {
+        outline: 2px solid var(--wp--custom--color--grey--900);
+    }
+
+    @include media-min(navigation) {
+        display: none;
+    }
+}
+
+.site-nav__toggle-box {
+    display: block;
+    height: 24px;
+    position: relative;
+    width: 32px;
+}
+
+.site-nav__toggle-box-inner,
+.site-nav__toggle-box-inner::after,
+.site-nav__toggle-box-inner::before {
+    background-color: var(--wp--custom--color--grey--1000);
+    display: block;
+    height: 1px;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    width: 32px;
+}
+
+.site-nav__toggle-box-inner {
+    display: block;
+    margin-top: -2px;
+    top: 50%;
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.site-nav__toggle-box-inner::after,
+.site-nav__toggle-box-inner::before {
+    content: "";
+}
+
+.site-nav__toggle-box-inner::before {
+    top: -10px;
+    transition: top 0.075s ease 0.2s, opacity 0.075s ease;
+}
+
+.site-nav__toggle-box-inner::after {
+    bottom: -10px;
+    transition: bottom 0.075s ease 0.2s, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.2s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner::before {
+    opacity: 0;
+    top: 0;
+    transition: top 0.075s ease, opacity 0.075s ease 0.2s;
+}
+
+[aria-expanded="true"] .site-nav__toggle-box-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+.site-nav__sub-toggle {
+    @include media(navigation) {
+        display: none;
+    }
+
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    padding: var(--wp--custom--spacing--1-2);
+    margin-left: var(--wp--custom--spacing--1-2);
+    transition: transform var(--transition-duration-md) ease-in-out;
+
+    svg {
+        pointer-events: none;
+        position: relative;
+        top: -0.0625em;
+        transition: transform var(--wp--custom--transition--3);
+        vertical-align: middle;
+    }
+}
+
+.site-nav__sub-toggle[aria-expanded="true"] {
+    svg {
+        transform: rotate(-180deg);
+    }
+}
