@@ -1,16 +1,14 @@
 import classNames from 'classnames';
 
-const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { PanelBody, RadioControl } = wp.components;
-const { InspectorControls, InnerBlocks, useBlockProps, useInnerBlocksProps } =
-    wp.blockEditor;
+const { InnerBlocks, useBlockProps, useInnerBlocksProps } = wp.blockEditor;
 
 /**
  * Internal dependencies
  */
 import block from './block.json';
 import ImageSelect from '../../components/image-select';
+import Sidebar from './components/sidebar';
 
 const ALLOWED_BLOCKS = [
     'core/paragraph',
@@ -28,17 +26,19 @@ const TEMPLATE = [
 export default registerBlockType(block.name, {
     edit: (props) => {
         const {
-            attributes: { imagePosition, image },
-            className,
+            attributes: { imagePosition, imageFull, image },
             setAttributes,
         } = props;
+
+        const imageFullClass = imageFull ? 'has-full-img' : 'has-not-full-img';
+        const alignClass = imageFull ? 'alignfull' : 'alignwide';
 
         const classes = classNames({
             'image-and-text': true,
             [`image-and-text--position-${imagePosition}`]: true,
-            alignfull: true,
+            [`${imageFullClass}`]: true,
+            [`${alignClass}`]: true,
             'content-row': true,
-            [`${className}`]: className ? true : false,
         });
 
         const blockProps = useBlockProps({ // eslint-disable-line
@@ -77,36 +77,3 @@ export default registerBlockType(block.name, {
 
     save: () => <InnerBlocks.Content />,
 });
-
-const Sidebar = (props) => {
-    const {
-        attributes: { imagePosition },
-        setAttributes,
-    } = props;
-    return (
-        <InspectorControls>
-            <PanelBody
-                title={__('Perusasetukset', 'meomblocks')}
-                initalOpen={true}
-            >
-                <RadioControl
-                    label={__('Kuvan sijainti', 'meomblocks')}
-                    selected={imagePosition}
-                    options={[
-                        {
-                            label: __('Vasemmalla', 'meomblocks'),
-                            value: 'left',
-                        },
-                        {
-                            label: __('Oikealla', 'meomblocks'),
-                            value: 'right',
-                        },
-                    ]}
-                    onChange={(newImagePosition) => {
-                        setAttributes({ imagePosition: newImagePosition });
-                    }}
-                />
-            </PanelBody>
-        </InspectorControls>
-    );
-};

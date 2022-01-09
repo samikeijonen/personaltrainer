@@ -79,10 +79,6 @@ body .editor-styles-wrapper {
 .editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > [data-align="full"],
 .editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .alignfull {
     max-width: none;
-}
-
-// Only for core blocks.
-.editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > [data-align="full"] {
     padding-left: 0;
     padding-right: 0;
 }

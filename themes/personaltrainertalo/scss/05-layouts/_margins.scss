@@ -58,8 +58,8 @@
 // Set all alignfull elements margin-top to zero, if they are first block.
 .content-area > .alignfull:first-child,
 .content-area .has-background + .has-background,
-.content-area .has-background + .image-and-text,
-.content-area .image-and-text + .has-background {
+.content-area .has-background + .image-and-text.has-full-img,
+.content-area .image-and-text.has-full-img + .has-background {
     margin-top: 0;
 }
 

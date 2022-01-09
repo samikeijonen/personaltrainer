@@ -20,7 +20,6 @@ export default registerBlockType(block.name, {
     edit: (props) => {
         const {
             attributes: { image },
-            className,
             setAttributes,
         } = props;
 
@@ -32,7 +31,6 @@ export default registerBlockType(block.name, {
             'x-padding': true,
             'has-background': true,
             'editor-outlines': true,
-            [`${className}`]: className ? true : false,
         });
 
         const blockProps = useBlockProps({ // eslint-disable-line

@@ -12,6 +12,10 @@
 			"type": "string",
 			"default": "left"
 		},
+		"imageFull": {
+			"type": "boolean",
+			"default": "true"
+		},
 		"image": {
 			"type": "object"
 		}
