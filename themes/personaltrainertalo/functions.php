@@ -17,6 +17,7 @@ require_once 'includes/enqueue-assets.php';
 require_once 'includes/gutenberg.php';
 require_once 'includes/helpers.php';
 require_once 'includes/filters.php';
+require_once 'includes/filters-nav.php';
 
 /**
  * Setup theme.
