@@ -1,5 +1,5 @@
 module.exports = {
-	...require( '@wordpress/prettier-config' ),
-	useTabs: false,
-	tabWidth: 4,
+    extends: ['@wordpress/prettier-config'],
+    useTabs: false,
+    tabWidth: 4,
 };
