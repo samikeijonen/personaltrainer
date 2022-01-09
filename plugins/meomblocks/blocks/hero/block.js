@@ -20,7 +20,6 @@ export default registerBlockType(block.name, {
     edit: (props) => {
         const {
             attributes: { image },
-            className,
             setAttributes,
         } = props;
 
@@ -30,7 +29,6 @@ export default registerBlockType(block.name, {
             alignfull: true,
             'content-row': true,
             'editor-outlines': true,
-            [`${className}`]: className ? true : false,
         });
 
         const blockProps = useBlockProps({ // eslint-disable-line
@@ -49,7 +47,7 @@ export default registerBlockType(block.name, {
 
         return (
             <div {...blockProps}>
-                <div className={`hero__container container`}>
+                <div className={`hero__container container x-padding`}>
                     <div {...innerBlocksProps}></div>
                     <figure className={`hero__image`}>
                         <ImageSelect

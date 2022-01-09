@@ -13,11 +13,10 @@ const BLOCK_SLUG = 'social-links';
 
 export default registerBlockType(name, {
     edit: (props) => {
-        const { attributes, className } = props;
+        const { attributes } = props;
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,
-            [`${className}`]: className ? true : false,
         });
 
         const blockProps = useBlockProps({ // eslint-disable-line

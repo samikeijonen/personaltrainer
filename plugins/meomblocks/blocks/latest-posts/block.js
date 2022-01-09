@@ -13,13 +13,12 @@ const BLOCK_SLUG = 'latest-posts';
 
 export default registerBlockType(name, {
     edit: (props) => {
-        const { attributes, className } = props;
+        const { attributes } = props;
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,
             // For editor.
             alignwide: true,
-            [`${className}`]: className ? true : false,
         });
 
         const blockProps = useBlockProps({ // eslint-disable-line

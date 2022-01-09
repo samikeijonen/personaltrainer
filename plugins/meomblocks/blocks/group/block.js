@@ -24,12 +24,10 @@ export default registerBlockType(block.name, {
     edit: (props) => {
         const {
             attributes: {},
-            className,
         } = props;
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,
-            [`${className}`]: className ? true : false,
         });
 
         const blockProps = useBlockProps({ // eslint-disable-line

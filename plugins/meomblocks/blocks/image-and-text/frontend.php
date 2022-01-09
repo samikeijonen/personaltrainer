@@ -3,15 +3,20 @@
 namespace MEOM\Blocks;
 
 $image_position = attr( 'imagePosition', $attributes, 'left' );
+$image_full     = attr( 'imageFull', $attributes, true );
 $bg_color       = attr( 'backgroundColor', $attributes, 'green-light' );
 $image          = attr( 'image', $attributes, null );
 $class_name     = attr( 'className', $attributes, '' );
 $content        = remove_empty_tags_recursive( $content );
 
+$image_full_class = $image_full ? 'has-full-img' : 'has-not-full-img';
+$align_class      = $image_full ? 'alignfull' : 'alignwide';
+
 $class_names = [
     'image-and-text',
     'image-and-text--position-' . $image_position,
-    'alignfull',
+    $image_full_class,
+    $align_class,
     'content-row',
 ];
 
