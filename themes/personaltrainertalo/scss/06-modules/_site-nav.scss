@@ -42,6 +42,13 @@
         &:last-child {
             margin-right: 0;
         }
+
+        &:hover > ul {
+            left: 0;
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
     }
 }
 
@@ -50,7 +57,7 @@
     color: var(--wp--custom--color--grey--700);
     font-weight: 700;
     letter-spacing: 0.025em;
-    padding: var(--wp--custom--spacing--2);
+    padding: var(--wp--custom--spacing--2) 0;
     text-decoration: none;
 
     @include media(navigation) {
@@ -67,6 +74,12 @@
     }
 }
 
+.menu-item--main .is-anchor-level-0 {
+    @include media(navigation) {
+        @include font-size(20);
+    }
+}
+
 .menu-item [aria-current="page"] {
     text-decoration: underline;
 }
@@ -76,6 +89,14 @@
 
     a {
         text-transform: none;
+
+        @include media(navigation) {
+            padding: var(--wp--custom--spacing--0-5) 0;
+        }
+    }
+
+    @include media(navigation) {
+        margin-bottom: var(--wp--custom--spacing--2);
     }
 
     @include media-min(navigation) {
