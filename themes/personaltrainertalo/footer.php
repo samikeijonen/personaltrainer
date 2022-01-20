@@ -16,7 +16,7 @@
                     // Needs to have slug `alapalkki`.
                     $form_post = get_page_by_path( 'lomake', '', 'wp_block' );
                     if ( $form_post ) :
-                        echo apply_filters( 'the_content', get_the_content( null, false, absint( $footer_post->ID )) ); // phpcs:ignore
+                        echo apply_filters( 'the_content', get_the_content( null, false, absint( $form_post->ID )) ); // phpcs:ignore
                     endif;
                 ?>
             </div>
