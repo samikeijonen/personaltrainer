@@ -88,6 +88,8 @@ function gutenberg_allowed_blocks( $allowed_blocks, $post ) {
         'core/button',
         'core/quote',
         'core/columns',
+        'core/shortcode',
+        'wpforms/form-selector',
     ];
 
     // Set MEOM ACF blocks.

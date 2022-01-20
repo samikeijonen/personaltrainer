@@ -1,7 +1,8 @@
 .btn,
 .wp-block-button__link,
 .wp-block-button__link:visited,
-input[type="submit"] {
+input[type="submit"],
+.wpforms-container button {
     background-color: var(--wp--custom--color--primary--700);
     border: 0;
     border-radius: 2px;

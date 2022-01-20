@@ -44,7 +44,8 @@
 
     "seravo/seravo-plugin": "*",
 
-    "wpackagist-plugin/wordpress-seo": "*"
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/wpforms-lite": "*"
   },
   "extra": {
     "installer-paths": {

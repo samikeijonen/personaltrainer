@@ -218,6 +218,12 @@
     margin-left: var(--wp--custom--spacing--1-2);
     transition: transform var(--transition-duration-md) ease-in-out;
 
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+    }
+
     svg {
         pointer-events: none;
         position: relative;
