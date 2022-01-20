@@ -1,0 +1,9 @@
+.contact {
+    @include default-top-padding();
+    @include default-bottom-padding();
+    background-color: var(--wp--custom--color--grey--200);
+}
+
+.contact__container {
+    max-width: var(--wp--custom--width--container-medium);
+}

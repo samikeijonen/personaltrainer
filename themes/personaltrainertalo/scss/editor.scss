@@ -45,6 +45,7 @@ body .editor-styles-wrapper {
     @import "06-modules/core-blocks";
     @import "06-modules/hero";
     @import "06-modules/post-item";
+    @import "06-modules/wpforms";
 
 
     /*--------------------------------------------------------------
@@ -53,6 +54,11 @@ body .editor-styles-wrapper {
     @import "07-utilities/alignments";
     @import "07-utilities/cover";
     @import "07-utilities/font-sizes";
+}
+
+// For WP Forms.
+.editor-styles-wrapper .wpforms {
+    @import "04-elements/form";
 }
 
 // Reset content row margins, there is plenty of margin in the editor without these.

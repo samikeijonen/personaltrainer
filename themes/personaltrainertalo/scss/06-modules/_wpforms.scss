@@ -1,0 +1,21 @@
+.wpforms-field-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: var(--wp--custom--spacing--4);
+
+    @include media-min(medium) {
+        grid-template-columns: 1fr 1fr;
+
+        > * {
+            grid-column: span 2;
+        }
+
+        > .wpforms-one-half {
+            grid-column: span 1;
+        }
+    }
+}
+
+.wpforms-submit {
+    margin-top: var(--wp--custom--spacing--4);
+}
