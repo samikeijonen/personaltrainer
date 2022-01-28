@@ -4,7 +4,7 @@
  * If you need to remove links from the categories, you can do it like this:
  * $entry_categories = wp_strip_all_tags( $entry_categories );
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 $entry_categories = get_the_category_list( ', ' );

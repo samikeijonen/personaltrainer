@@ -2,7 +2,7 @@
 /**
  * Partial for displaying Footer nav.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 if ( ! has_nav_menu( 'footer' ) ) :

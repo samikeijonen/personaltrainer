@@ -2,7 +2,7 @@
 /**
  * Partial for displaying page content.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 ?>

@@ -2,7 +2,7 @@
 /**
  * General filters used in the theme
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 namespace Kala;

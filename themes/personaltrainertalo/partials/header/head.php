@@ -2,7 +2,7 @@
 /**
  * Head template.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 ?><!DOCTYPE html>
