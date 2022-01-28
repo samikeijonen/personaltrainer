@@ -3,7 +3,7 @@
  * Partial for displaying selected posts.
  * Is called also from meomblocks.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 global $post;

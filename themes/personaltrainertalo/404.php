@@ -2,7 +2,7 @@
 /**
  * 404 template.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 get_header();

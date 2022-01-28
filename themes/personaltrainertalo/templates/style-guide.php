@@ -2,7 +2,7 @@
 /**
  * Template Name: Style Guide
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 get_header();

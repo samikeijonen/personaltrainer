@@ -2,7 +2,7 @@
 /**
  * Partial for displaying nav.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 if ( ! has_nav_menu( 'main' ) ) :

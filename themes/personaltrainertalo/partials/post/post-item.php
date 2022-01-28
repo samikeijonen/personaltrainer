@@ -2,7 +2,7 @@
 /**
  * Partial for displaying the post item.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 ?>

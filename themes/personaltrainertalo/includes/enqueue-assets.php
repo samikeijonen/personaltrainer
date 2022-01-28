@@ -2,7 +2,7 @@
 /**
  * Register needed scripts and styles.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 namespace Kala;

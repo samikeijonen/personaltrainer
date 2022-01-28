@@ -2,7 +2,7 @@
 /**
  * Gutenberg initialization and settings
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 namespace Kala;

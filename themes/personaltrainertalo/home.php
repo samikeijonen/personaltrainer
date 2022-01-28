@@ -2,7 +2,7 @@
 /**
  * Home template.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 use function Kala\get_svg;

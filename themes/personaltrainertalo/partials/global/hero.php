@@ -3,7 +3,7 @@
  * Partial for displaying hero.
  * Is called also from meomblocks.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 use function Kala\display_svg;

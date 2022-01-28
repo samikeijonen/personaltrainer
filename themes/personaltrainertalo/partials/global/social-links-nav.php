@@ -2,7 +2,7 @@
 /**
  * Partial for displaying Social links nav.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 if ( ! has_nav_menu( 'social_links' ) ) :

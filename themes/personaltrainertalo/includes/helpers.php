@@ -2,7 +2,7 @@
 /**
  * General helper functions.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 namespace Kala;

@@ -2,7 +2,7 @@
 /**
  * Functions.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 namespace Kala;
@@ -18,6 +18,7 @@ require_once 'includes/gutenberg.php';
 require_once 'includes/helpers.php';
 require_once 'includes/filters.php';
 require_once 'includes/filters-nav.php';
+require_once 'includes/post-types.php';
 
 /**
  * Setup theme.

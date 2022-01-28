@@ -2,7 +2,7 @@
 /**
  * Archive template.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 include 'home.php';

@@ -2,7 +2,7 @@
 /**
  * Cleanup.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 namespace Kala;

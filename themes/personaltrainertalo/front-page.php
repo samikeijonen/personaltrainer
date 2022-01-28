@@ -2,7 +2,7 @@
 /**
  * Front page template.
  *
- * @package Lahdensivunkoti
+ * @package Kala
  */
 
 get_header();
