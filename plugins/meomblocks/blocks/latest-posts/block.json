@@ -5,5 +5,17 @@
     "category": "meomblocks",
     "icon": "list-view",
     "keywords": ["latest", "posts", "meom"],
-    "attributes": {}
+    "attributes": {
+        "postType": {
+            "type": "string",
+            "default": "post"
+        },
+        "termId": {
+            "type": "string"
+        },
+        "count": {
+            "type": "string",
+            "default": "3"
+        }
+	}
 }

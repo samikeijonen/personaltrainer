@@ -2,7 +2,7 @@
  * WordPress dependencies
  */
 const { __ } = wp.i18n;
-const { withSelect } = wp.data;
+const { useDispatch, useSelect } = wp.data;
 const { SelectControl, Spinner } = wp.components;
 
 /**
@@ -10,17 +10,34 @@ const { SelectControl, Spinner } = wp.components;
  *
  * @param {Object} props Props for component.
  */
-const TermSelector = (props) => {
-    const { attributes, setAttributes } = props;
+function TermSelector(props) {
+    const {
+        attributes: { postType, termId },
+        setAttributes,
+    } = props;
     const options = [];
+
+    // Set correct taxonomy based on post type.
+    let taxonomy = 'category';
+    if (postType === 'reference') {
+        taxonomy = 'reference_category';
+    }
+    if (postType === 'professional') {
+        taxonomy = 'professional_category';
+    }
+
+    const [terms, isLoading, invalidateRequest] = useRequestData(
+        'taxonomy',
+        taxonomy
+    );
 
     options.push({
         value: 0,
-        label: __('From which category', 'meom-blocks'),
+        label: __('From all categories', 'meomblocks'),
     });
 
-    if (!props.isRequesting) {
-        props.terms.forEach((term) => {
+    if (!isLoading && terms && terms.length > 0) {
+        terms.forEach((term) => {
             options.push({
                 value: term.id,
                 label: term.name,
@@ -30,51 +47,59 @@ const TermSelector = (props) => {
 
     return (
         <>
-            {props.isRequesting && <Spinner />}
+            {isLoading && <Spinner />}
 
-            {!props.isRequesting && (
+            {!isLoading && (
                 <>
                     <SelectControl
-                        label={__('Select category 1', 'meom-blocks')}
+                        label={__('Select category', 'meomblocks')}
                         options={options}
                         onChange={(newTermId) => {
-                            setAttributes({ termId1: newTermId });
+                            setAttributes({ termId: newTermId });
                         }}
-                        value={attributes.termId1}
+                        value={termId}
                     />
 
-                    <SelectControl
-                        label={__('Select category 2', 'meom-blocks')}
-                        options={options}
-                        onChange={(newTermId) => {
-                            setAttributes({ termId2: newTermId });
-                        }}
-                        value={attributes.termId2}
-                    />
-
-                    <SelectControl
-                        label={__('Select category 3', 'meom-blocks')}
-                        options={options}
-                        onChange={(newTermId) => {
-                            setAttributes({ termId3: newTermId });
-                        }}
-                        value={attributes.termId3}
-                    />
+                    <button
+                        className="button"
+                        type="button"
+                        onClick={invalidateRequest}
+                    >
+                        {__('Refresh category list', 'meomblocks')}
+                    </button>
                 </>
             )}
         </>
     );
-};
+}
 
-export default withSelect((select, props) => {
-    const { taxonomy } = props;
-    const { isResolving } = select('core/data');
-    return {
-        terms: select('core').getEntityRecords('taxonomy', taxonomy),
-        isRequesting: isResolving('core', 'getEntityRecords', [
-            'taxonomy',
-            taxonomy,
-        ]),
-        props,
+/**
+ * Hook for retrieving data from the WordPress REST API.
+ * See: https://github.com/10up/block-components/blob/develop/hooks/use-request-data.js
+ *
+ * @param {string}          entity  The entity to retrieve. ie. postType
+ * @param {string}          kind    The entity kind to retrieve. ie. posts
+ * @param {Object | number} [query] Optional. Query to pass to the geEntityRecords request. Defaults to an empty object. If a number is passed, it is used as the ID of the entity to retrieve via getEntityRecord.
+ * @return {Array} The data returned from the request.
+ */
+function useRequestData(entity, kind, query = {}) {
+    const { invalidateResolution } = useDispatch('core/data');
+    const { data, isLoading } = useSelect((select) => {
+        return {
+            data: select('core').getEntityRecords(entity, kind, query),
+            isLoading: select('core/data').isResolving(
+                'core',
+                'getEntityRecords',
+                [entity, kind, query]
+            ),
+        };
+    });
+
+    const invalidateResolver = () => {
+        invalidateResolution('core', 'getEntityRecords', [entity, kind, query]);
     };
-})(TermSelector);
+
+    return [data, isLoading, invalidateResolver];
+}
+
+export default TermSelector;

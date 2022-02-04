@@ -6,6 +6,7 @@ const { useBlockProps } = wp.blockEditor;
 const { serverSideRender: ServerSideRender } = wp;
 
 import metadata from './block.json';
+import Sidebar from './components/sidebar';
 
 const { name } = metadata;
 
@@ -28,6 +29,8 @@ export default registerBlockType(name, {
         return (
             <div {...blockProps}>
                 <ServerSideRender block={name} attributes={attributes} />
+
+                <Sidebar {...props} />
             </div>
         );
     },
