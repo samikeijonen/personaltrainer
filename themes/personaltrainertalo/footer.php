@@ -9,7 +9,7 @@
     </div>
         </main><!-- .site-content -->
 
-        <section class="contact x-padding" aria-label="<?php esc_attr_e( 'Contact', 'kala' ); ?>">
+        <section id="contact" class="contact x-padding" aria-label="<?php esc_attr_e( 'Contact', 'kala' ); ?>">
             <div class="contact__container container top-margin">
             <?php
                     // Echo from reusable blocks `/wp-admin/edit.php?post_type=wp_block`.

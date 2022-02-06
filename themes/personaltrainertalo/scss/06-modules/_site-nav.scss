@@ -18,7 +18,7 @@
             display: block;
             left: 0;
             overflow-x: auto;
-            padding: var(--wp--custom--spacing--16) var(--wp--custom--spacing--2) var(--wp--custom--spacing--2);
+            padding: var(--space-3xl) var(--space-s) var(--space-s);
             position: fixed;
             right: 0;
             top: 0;
@@ -37,7 +37,7 @@
     position: relative;
 
     @include media-min(navigation) {
-        margin-right: var(--wp--custom--spacing--4);
+        margin-right: var(--space-m);
 
         &:last-child {
             margin-right: 0;
@@ -53,11 +53,11 @@
 }
 
 .site-nav__items a {
-    @include font-size(16);
+    font-size: var(--wp--custom--text--step-m-1);
     color: var(--wp--custom--color--grey--700);
     font-weight: 700;
     letter-spacing: 0.025em;
-    padding: var(--wp--custom--spacing--2) 0;
+    padding: var(--space-s) 0;
     text-decoration: none;
 
     @include media(navigation) {
@@ -65,7 +65,7 @@
     }
 
     @include media-min(navigation) {
-        padding: var(--wp--custom--spacing--1) 0;
+        padding: var(--space-xs) 0;
     }
 
     &:hover {
@@ -76,7 +76,7 @@
 
 .menu-item--main .is-anchor-level-0 {
     @include media(navigation) {
-        @include font-size(20);
+        font-size: var(--wp--custom--text--step-1);
     }
 }
 
@@ -91,12 +91,12 @@
         text-transform: none;
 
         @include media(navigation) {
-            padding: var(--wp--custom--spacing--0-5) 0;
+            padding: var(--space-2xs) 0;
         }
     }
 
     @include media(navigation) {
-        margin-bottom: var(--wp--custom--spacing--2);
+        margin-bottom: var(--space-s);
     }
 
     @include media-min(navigation) {
@@ -105,7 +105,7 @@
         opacity: 0;
         margin-top: 0;
         min-width: 15rem;
-        padding: var(--wp--custom--spacing--2);
+        padding: var(--space-s);
         position: absolute;
         text-align: left;
         top: 100%;
@@ -130,7 +130,7 @@
     border-radius: 0;
     color: var(--wp--custom--color--grey--900);
     line-height: 1;
-    padding: var(--wp--custom--spacing--1);
+    padding: var(--space-2xs);
     position: relative;
     z-index: 120;
 
@@ -214,8 +214,8 @@
     border: 0;
     border-radius: 0;
     display: inline-block;
-    padding: var(--wp--custom--spacing--1-2);
-    margin-left: var(--wp--custom--spacing--1-2);
+    padding: 0.25rem;
+    margin-left: 0.25rem;
     transition: transform var(--transition-duration-md) ease-in-out;
 
     &:hover,

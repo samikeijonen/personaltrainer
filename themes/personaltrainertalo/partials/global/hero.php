@@ -15,7 +15,7 @@ $class       = 'hero cover-bg content-row alignfull ' . $extra_class;
 
 if ( $content ) : ?>
     <div class="<?php echo esc_html( $class ); ?>">
-        <div class="hero__container container x-padding ">
+        <div class="hero__container container alignwide x-padding ">
             <div class="hero__content top-margin">
                 <?php echo do_blocks( $content ); // phpcs:ignore ?>
             </div>

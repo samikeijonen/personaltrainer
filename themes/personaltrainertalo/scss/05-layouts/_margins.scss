@@ -7,32 +7,31 @@
 // For editor.
 .is-root-container > * + * {
     margin-bottom: 0;
-    margin-top: var(--wp--custom--spacing--4);
+    margin-top: var(--space-m);
 }
 
 .top-margin--xl > * + * {
-    margin-top: var(--wp--custom--spacing--6);
+    margin-top: var(--space-xl);
 }
 
 .top-margin--md > * + * {
-    margin-top: var(--wp--custom--spacing--3);
+    margin-top: var(--space-m);
 }
 
 .top-margin--sm > * + * {
-    margin-top: var(--wp--custom--spacing--2);
+    margin-top: var(--space-s);
 }
 
 .content-area > {
     :first-child {
-        @include default-top-margin();
+        margin-top: var(--space-2xl-3xl);
     }
 
     :last-child {
-        @include default-bottom-margin();
+        margin-bottom: var(--space-2xl-3xl);
     }
 
     :last-child.has-background,
-    :last-child.image-and-text,
     :last-child.social-links {
         margin-bottom: 0;
     }
@@ -40,19 +39,23 @@
 
 .content-area > h2,
 .content-area > h3,
+.content-area > h4,
 // For editor.
 .is-root-container > h2,
-.is-root-container > h3 {
-    margin-top: var(--wp--custom--spacing--6);
+.is-root-container > h3,
+.is-root-container > h4 {
+    margin-top: var(--space-xl);
 }
 
 // Helper class for unifying space aroud modules
-.content-row,
-.group,
+.content-area > .content-row,
+.content-area > .group,
+.content-area > .wp-block-columns,
 // Next element top margin inside the content area.
-.content-area .content-row + *,
-.content-area .group + * {
-    @include default-top-margin();
+.content-area > .content-row + *,
+.content-area > .group + *,
+.content-area > .wp-block-columns + * {
+    margin-top: var(--space-2xl-3xl);
 }
 
 // Set all alignfull elements margin-top to zero, if they are first block.

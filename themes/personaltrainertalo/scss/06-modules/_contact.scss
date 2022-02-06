@@ -1,7 +1,7 @@
 .contact {
-    @include default-top-padding();
-    @include default-bottom-padding();
     background-color: var(--wp--custom--color--grey--200);
+    padding-bottom: var(--space-2xl-3xl);
+    padding-top: var(--space-2xl-3xl);
 }
 
 .contact__container {

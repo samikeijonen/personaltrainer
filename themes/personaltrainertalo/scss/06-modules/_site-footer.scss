@@ -1,16 +1,15 @@
 .site-footer {
-    @include default-top-padding();
-    @include default-bottom-padding();
-
     background-color: var(--wp--custom--color--grey--200);
+    padding-bottom: var(--space-xl-2xl);
+    padding-top: var(--space-xl-2xl);
 }
 
 .site-footer__text {
-    @include font-size(16);
+    font-size: var(--wp--custom--text--step-m-1);
 }
 
 .site-footer__text h2 {
-    @include font-size(18);
+    font-size: var(--wp--custom--text--step-0);
 }
 
 .site-footer__text ul {

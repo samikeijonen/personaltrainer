@@ -20,7 +20,7 @@
         clip-path: none;
         color: var(--wp--custom--color--neutral--white);
         display: block;
-        @include font-size(14);
+        font-size: var(--wp--custom--text--step-m-1);
         font-weight: 800;
         height: auto;
         margin: 0;
