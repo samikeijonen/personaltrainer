@@ -4,14 +4,10 @@
 .wp-block-column > ol,
 .image-and-text__content > ul,
 .image-and-text__content > ol {
-    padding-left: var(--wp--custom--spacing--3);
-
-    @include media-min(medium) {
-        padding-left: var(--wp--custom--spacing--4);
-    }
+    padding-left: var(--space-s);
 
     > li {
-        margin-top: var(--wp--custom--spacing--1);
+        margin-top: var(--space-3xs);
     }
 
     > li:first-child {

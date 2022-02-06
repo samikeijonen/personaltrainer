@@ -5,13 +5,13 @@
 .nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--wp--custom--spacing--1);
+    gap: var(--space-2xs);
     justify-content: center;
 }
 
 .page-numbers {
     display: block;
-    padding: 1rem 1.25rem;
+    padding: var(--space-2xs) var(--space-xs);
     line-height: 1;
     text-align: center;
 

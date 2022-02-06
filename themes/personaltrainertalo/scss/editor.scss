@@ -10,12 +10,10 @@
 --------------------------------------------------------------*/
 @import "02-tools/mixin";
 
-// Let side-padding be first just in case.
-@import "05-layouts/side-padding";
-
 body .editor-styles-wrapper {
-    @include text-style(body);
+    font-size: var(--wp--custom--text--step-0);
     font-family: var(--wp--custom--font--sans-serif);
+    line-height: var(--wp--custom--line-height--text);
     color: var(--wp--custom--color--grey--800);
 
     /*--------------------------------------------------------------
@@ -53,7 +51,6 @@ body .editor-styles-wrapper {
     --------------------------------------------------------------*/
     @import "07-utilities/alignments";
     @import "07-utilities/cover";
-    @import "07-utilities/font-sizes";
 }
 
 // For WP Forms.

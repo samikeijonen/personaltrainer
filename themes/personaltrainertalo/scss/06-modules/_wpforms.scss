@@ -1,7 +1,7 @@
 .wpforms-field-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: var(--wp--custom--spacing--4);
+    grid-gap: var(--space-m);
 
     @include media-min(medium) {
         grid-template-columns: 1fr 1fr;
@@ -17,5 +17,5 @@
 }
 
 .wpforms-submit {
-    margin-top: var(--wp--custom--spacing--4);
+    margin-top: var(--space-m);
 }

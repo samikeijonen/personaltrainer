@@ -8,8 +8,8 @@
 .x-padding,
 .has-background.alignfull,
 [data-align="full"] .has-background {
-    padding-left: var(--side-padding);
-    padding-right: var(--side-padding);
+    padding-left: var(--space-s-xl);
+    padding-right: var(--space-s-xl);
 }
 
 .alignregular {
@@ -23,7 +23,7 @@
 }
 
 .alignfull {
-    margin-left: calc(var(--side-padding) * -1);
-    margin-right: calc(var(--side-padding) * -1);
+    margin-left: calc(var(--space-s-xl) * -1);
+    margin-right: calc(var(--space-s-xl) * -1);
     max-width: none;
 }

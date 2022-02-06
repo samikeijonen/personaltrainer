@@ -1,20 +1,19 @@
 .hero {
-    @include small-top-padding();
-    @include small-bottom-padding();
     background-color: var(--wp--custom--color--grey--1000);
     margin-bottom: 0;
+    padding-bottom: var(--space-l-xl);
+    padding-top: var(--space-l-xl);
     position: relative;
 
     &__container {
         align-items: center;
+        box-sizing: content-box;
         display: flex;
         flex-direction: row;
-        /* Plus side paddings. */
-        max-width: calc(var(--wp--custom--width--container-wide) + var(--side-padding) * 2);
         min-height: 20rem;
 
         @include media-min(medium) {
-            min-height: 30rem;
+            min-height: 35rem;
         }
     }
 

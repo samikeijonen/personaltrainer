@@ -1,8 +1,8 @@
 @import "../../style-imports/theme-imports";
 
 .cover {
-    @include small-top-padding();
-    @include small-bottom-padding();
+    padding-bottom: var(--space-l-xl);
+    padding-top: var(--space-l-xl);
     background-color: var(--wp--custom--color--grey--1000);
     margin-bottom: 0;
     position: relative;

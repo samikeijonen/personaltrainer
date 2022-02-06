@@ -42,8 +42,6 @@
 /*--------------------------------------------------------------
 # Layout - Undecorated design patterns.
 --------------------------------------------------------------*/
-// Let side-padding be first just in case.
-@import "05-layouts/side-padding";
 @import "05-layouts/animations";
 @import "05-layouts/content-area";
 @import "05-layouts/container";
@@ -81,4 +79,3 @@
 @import "07-utilities/accessibility";
 @import "07-utilities/alignments";
 @import "07-utilities/cover";
-@import "07-utilities/font-sizes";
