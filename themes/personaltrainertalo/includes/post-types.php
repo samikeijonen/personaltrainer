@@ -9,7 +9,7 @@ namespace Kala;
 
 function post_type_professional() {
     $labels = [
-        'name'               => _x( 'Professional', 'Post Type General Name', 'kala' ),
+        'name'               => _x( 'Professionals', 'Post Type General Name', 'kala' ),
         'singular_name'      => _x( 'Professional', 'Post Type Singular Name', 'kala' ),
         'menu_name'          => __( 'Professionals', 'kala' ),
         'name_admin_bar'     => __( 'Professional', 'kala' ),
@@ -27,7 +27,7 @@ function post_type_professional() {
     ];
 
     $rewrite = [
-        'slug'       => 'asiantuntija',
+        'slug'       => 'asiantuntijat',
         'with_front' => true,
         'pages'      => true,
         'feeds'      => true,
@@ -35,7 +35,6 @@ function post_type_professional() {
 
     $args = [
         'label'               => __( 'Professional', 'kala' ),
-        'description'         => __( 'The Professional post type.', 'kala' ),
         'labels'              => $labels,
         'supports'            => [ 'title', 'editor', 'excerpt', 'thumbnail' ],
         'taxonomies'          => [],
@@ -89,7 +88,7 @@ add_action( 'init', 'Kala\post_type_professional' );
 
 function post_type_reference() {
     $labels = [
-        'name'               => _x( 'Reference', 'Post Type General Name', 'kala' ),
+        'name'               => _x( 'References', 'Post Type General Name', 'kala' ),
         'singular_name'      => _x( 'Reference', 'Post Type Singular Name', 'kala' ),
         'menu_name'          => __( 'References', 'kala' ),
         'name_admin_bar'     => __( 'Reference', 'kala' ),
@@ -107,7 +106,7 @@ function post_type_reference() {
     ];
 
     $rewrite = [
-        'slug'       => 'asiakastarina',
+        'slug'       => 'tarinat',
         'with_front' => true,
         'pages'      => true,
         'feeds'      => true,
@@ -115,7 +114,6 @@ function post_type_reference() {
 
     $args = [
         'label'               => __( 'Reference', 'kala' ),
-        'description'         => __( 'The Reference post type.', 'kala' ),
         'labels'              => $labels,
         'supports'            => [ 'title', 'editor', 'excerpt', 'thumbnail' ],
         'taxonomies'          => [],
