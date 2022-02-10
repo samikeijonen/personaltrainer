@@ -1,0 +1,30 @@
+.entry__meta {
+    color: var(--wp--custom--color--grey--600);
+}
+
+.entry__terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    justify-content: center;
+
+    a {
+        background-color: var(--wp--custom--color--grey--200);
+        color: var(--wp--custom--color--grey--900);
+        font-size: var(--wp--custom--text--step-m-1);
+        padding: var(--space-2xs) var(--space-xs);
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: var(--wp--custom--color--grey--900);
+            color: var(--wp--custom--color--neutral--white);
+        }
+    }
+}
+
+.entry__terms--category {
+    justify-content: flex-start;
+    margin-top: var(--space-l-xl);
+}

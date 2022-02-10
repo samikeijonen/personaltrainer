@@ -149,3 +149,55 @@ function get_svg( $icon = '', $path = '/images/icons/' ) {
     // Return markup or empty if icon does not exist.
     return file_exists( $svg_file ) ? file_get_contents( $svg_file ) : '';
 }
+
+/**
+ * Outputs the post terms HTML.
+ *
+ * @param  array $args
+ * @return void
+ */
+function display_terms( array $args = [] ) {
+    echo render_terms( $args ); // phpcs:ignore
+}
+
+/**
+ * Returns the post terms HTML.
+ *
+ * @param  array  $args
+ * @return string
+ */
+function render_terms( array $args = [] ) {
+    $html = '';
+
+    $args = wp_parse_args(
+        $args,
+        [
+            'taxonomy' => 'category',
+            'text'     => '%s',
+            'class'    => '',
+            // Translators: Separates tags, categories, etc. when displaying a post.
+            'sep'      => _x( ', ', 'taxonomy terms separator', 'kala' ),
+            'before'   => '',
+            'after'    => '',
+        ]
+    );
+
+    // Append taxonomy to class name.
+    if ( ! $args['class'] ) {
+        $args['class'] = "entry__terms entry__terms--{$args['taxonomy']}";
+    }
+
+    $terms = get_the_term_list( get_the_ID(), $args['taxonomy'], '', $args['sep'], '' );
+
+    if ( $terms ) {
+        $html = sprintf(
+            '<span class="%s">%s</span>',
+            esc_attr( $args['class'] ),
+            sprintf( $args['text'], $terms )
+        );
+
+        $html = $args['before'] . $html . $args['after'];
+    }
+
+    return $html;
+}

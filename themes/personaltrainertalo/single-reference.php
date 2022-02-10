@@ -12,15 +12,12 @@ while ( have_posts() ) :
 
     <article id="post-<?php the_ID(); ?>" <?php post_class( 'content-area entry' ); ?>>
         <h1 class="entry__title has-text-align-center alignwide"><?php the_title(); ?></h1>
+        <div class="entry__meta has-text-align-center">
+            <?php Kala\display_terms( [ 'taxonomy' => 'reference_category', 'sep' => '' ] ) ?>
+        </div>
         <?php
-            get_template_part( 'partials/post/entry-meta' );
-
             the_content();
         ?>
-
-        <div class="entry__meta">
-            <?php Kala\display_terms( [ 'sep' => '' ] ) ?>
-        </div>
     </article>
 
     <?php
