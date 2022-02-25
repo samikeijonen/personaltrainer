@@ -22,7 +22,6 @@
             </div>
         </section>
 
-        <svg class="site-footer__wave" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="var(--wp--custom--color--grey--200)" fill-opacity="1" d="M0,160L80,170.7C160,181,320,203,480,192C640,181,800,139,960,138.7C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
         <footer class="site-footer x-padding">
             <div class="site-footer__container container top-margin top-margin--xl">
                 <div class="site-footer__text top-margin">

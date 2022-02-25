@@ -9,7 +9,7 @@
     margin-top: 0;
 
     @include media(navigation) {
-        background-color: var(--wp--custom--color--grey--200);
+        background-color: var(--wp--custom--color--blue);
         display: none;
         text-align: center;
 
@@ -54,11 +54,14 @@
 
 .site-nav__items a {
     font-size: var(--wp--custom--text--step-m-1);
-    color: var(--wp--custom--color--grey--700);
-    font-weight: 700;
-    letter-spacing: 0.025em;
-    padding: var(--space-s) 0;
+    color: var(--wp--custom--color--neutral--white);
+    font-weight: 500;
+    padding: var(--space-xs) 0;
     text-decoration: none;
+
+    &:focus {
+        outline-color: var(--wp--custom--color--neutral--white);
+    }
 
     @include media(navigation) {
         display: block;
@@ -81,6 +84,7 @@
 }
 
 .menu-item [aria-current="page"] {
+    color: var(--wp--custom--color--orange);
     text-decoration: underline;
 }
 
@@ -134,9 +138,17 @@
     position: relative;
     z-index: 120;
 
+    &[aria-expanded="true"] {
+        color: var(--wp--custom--color--neutral--white);
+    }
+
     /* For some reason Firefox in WIN doesn't give good focus styles withouth this. */
     &:focus {
         outline: 2px solid var(--wp--custom--color--grey--900);
+    }
+
+    &[aria-expanded="true"]:focus {
+        outline-color: var(--wp--custom--color--neutral--white);
     }
 
     @include media-min(navigation) {
@@ -154,7 +166,7 @@
 .site-nav__toggle-box-inner,
 .site-nav__toggle-box-inner::after,
 .site-nav__toggle-box-inner::before {
-    background-color: var(--wp--custom--color--grey--1000);
+    background-color: var(--wp--custom--color--neutral--white);
     display: block;
     height: 1px;
     position: absolute;
@@ -209,13 +221,13 @@
     @include media(navigation) {
         display: none;
     }
-
     background-color: transparent;
+    color: var(--wp--custom--color--neutral--white);
     border: 0;
     border-radius: 0;
     display: inline-block;
     padding: 0.25rem;
-    margin-left: 0.25rem;
+    margin-left: 0.125rem;
     transition: transform var(--transition-duration-md) ease-in-out;
 
     &:hover,
@@ -225,6 +237,7 @@
     }
 
     svg {
+        fill: currentColor;
         pointer-events: none;
         position: relative;
         top: -0.0625em;
