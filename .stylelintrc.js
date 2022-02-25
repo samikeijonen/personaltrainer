@@ -13,5 +13,6 @@ module.exports = {
         "selector-class-pattern": null,
         "no-invalid-double-slash-comments": null,
         "function-calc-no-invalid": null,
+        "function-url-quotes": null,
     }
 };
