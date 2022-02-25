@@ -64,13 +64,16 @@ body .editor-styles-wrapper {
     margin-bottom: 0;
 }
 
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container {
+    padding-left: var(--space-s-xl);
+    padding-right: var(--space-s-xl);
+}
+
 // Force centering the elements.
 .editor-styles-wrapper .block-editor-block-list__layout.is-root-container > * {
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: var(--wp--custom--width--container--medium);
-    padding-left: var(--wp--custom--spacing--6);
-    padding-right: var(--wp--custom--spacing--6);
 }
 
 // Wide width.
@@ -81,6 +84,8 @@ body .editor-styles-wrapper {
 // Full width.
 .editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > [data-align="full"],
 .editor-styles-wrapper.editor-styles-wrapper .block-editor-block-list__layout.is-root-container > .alignfull {
+    margin-left: calc(var(--space-s-xl) * -1) !important;
+    margin-right: calc(var(--space-s-xl) * -1) !important;
     max-width: none;
     padding-left: 0;
     padding-right: 0;
