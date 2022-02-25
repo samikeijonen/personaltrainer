@@ -216,7 +216,7 @@
 // Blockquote block.
 .wp-block-quote,
 blockquote {
-    border-left: 4px solid var(--wp--custom--color--grey--500);
+    border-left: 4px solid var(--wp--custom--color--orange);
     padding-left: var(--space-m);
 
     p {
@@ -265,7 +265,7 @@ ul.wp-block-social-links {
     }
 
     a {
-        background-color: var(--wp--custom--color--primary--700);
+        background-color: var(--wp--custom--color--orange);
         color: var(--wp--custom--color--neutral--white);
         border-radius: 50%;
         display: block;

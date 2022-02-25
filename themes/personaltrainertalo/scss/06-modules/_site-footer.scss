@@ -1,11 +1,17 @@
 .site-footer {
-    background-color: var(--wp--custom--color--grey--200);
-    padding-bottom: var(--space-xl-2xl);
-    padding-top: var(--space-xl-2xl);
+    background-color: var(--wp--custom--color--blue);
+    color: var(--wp--custom--color--neutral--white);
+    padding-bottom: var(--space-2xl-3xl);
+    padding-top: var(--space-2xl-3xl);
 }
 
 .site-footer__text {
     font-size: var(--wp--custom--text--step-m-1);
+}
+
+.site-footer__text h2,
+.site-footer__text a {
+    color: var(--wp--custom--color--neutral--white);
 }
 
 .site-footer__text h2 {
