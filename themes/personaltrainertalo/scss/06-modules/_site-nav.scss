@@ -60,7 +60,7 @@
     text-decoration: none;
 
     &:focus {
-        outline-color: var(--wp--custom--color--neutral--orange);
+        outline-color: var(--wp--custom--color--orange);
     }
 
     @include media(navigation) {
@@ -230,6 +230,10 @@
     &:active,
     &:focus {
         background-color: transparent;
+    }
+
+    &:focus {
+        outline-color: var(--wp--custom--color--neutral--white);
     }
 
     svg {
