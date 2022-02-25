@@ -60,7 +60,7 @@
     text-decoration: none;
 
     &:focus {
-        outline-color: var(--wp--custom--color--neutral--white);
+        outline-color: var(--wp--custom--color--neutral--orange);
     }
 
     @include media(navigation) {
@@ -144,11 +144,7 @@
 
     /* For some reason Firefox in WIN doesn't give good focus styles withouth this. */
     &:focus {
-        outline: 2px solid var(--wp--custom--color--grey--900);
-    }
-
-    &[aria-expanded="true"]:focus {
-        outline-color: var(--wp--custom--color--neutral--white);
+        outline: 2px solid var(--wp--custom--color--neutral--white);
     }
 
     @include media-min(navigation) {

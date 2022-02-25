@@ -9,11 +9,24 @@
     margin: 0;
     position: relative;
     z-index: 110;
+
+    svg {
+        max-width: 7rem;
+
+        @include media-min(navigation) {
+            max-width: 11rem;
+        }
+    }
 }
 
 .site-header__title a {
-    color: var(--wp--custom--color--neutral--white);
+    color: var(--wp--custom--color--neutral--lime);
+    display: inline-flex;
     text-decoration: none;
+
+    &:focus {
+        outline-color: var(--wp--custom--color--neutral--lime);
+    }
 }
 
 .site-header__container {
