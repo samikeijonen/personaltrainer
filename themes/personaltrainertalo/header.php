@@ -18,7 +18,8 @@ get_template_part( 'partials/header/head' );
 
                 <div class="site-header__title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <span class=""><?php bloginfo( 'name' ); ?></span>
+                        <span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span>
+                        <?php Kala\display_svg( 'ehona-lime', '/images/logos/' ) ?>
                     </a>
                 </div>
 
