@@ -104,7 +104,7 @@
     }
 
     @include media-min(navigation) {
-        background-color: var(--wp--custom--color--grey--200);
+        background-color: var(--wp--custom--color--blue);
         left: -999em;
         opacity: 0;
         margin-top: 0;
