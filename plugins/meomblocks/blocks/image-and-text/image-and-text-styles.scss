@@ -45,7 +45,20 @@
     }
 }
 
-.image-and-text.has-full-img + .image-and-text.has-full-img,
-.hero + .image-and-text {
-    margin-top: 0;
+.has-full-img .image-and-text__content {
+    padding-left: var(--space-s-xl);
+    padding-right: var(--space-s-xl);
+}
+
+.has-not-full-img .image-and-text__content {
+    @include media-min(medium-large) {
+        padding-left: var(--space-s-xl);
+        padding-right: var(--space-s-xl);
+    }
+}
+
+.image-and-text.has-full-img + .image-and-text.has-full-img {
+    @include media-min(medium-large) {
+        margin-top: 0;
+    }
 }

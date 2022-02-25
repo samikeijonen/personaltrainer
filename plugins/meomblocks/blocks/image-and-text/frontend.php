@@ -25,13 +25,13 @@ $wrapper_attributes = get_block_wrapper_attributes( [ 'class' => implode( ' ', $
 
 if ( $content ) : ?>
     <div <?php echo $wrapper_attributes; // phpcs:ignore ?>>
-        <div class="image-and-text__container grid has-2-columns has-no-gap">
+        <div class="image-and-text__container grid has-2-columns has-no-gap top-margin">
             <?php if ( $image ) : ?>
                 <figure class="image-and-text__image">
                     <?php echo wp_get_attachment_image( $image['id'], 'large' ); // phpcs:ignore ?>
                 </figure>
             <?php endif; ?>
-            <div class="image-and-text__content top-margin x-padding">
+            <div class="image-and-text__content top-margin">
                 <?php echo do_blocks( $content ); // phpcs:ignore ?>
             </div>
         </div>
