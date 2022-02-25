@@ -60,8 +60,8 @@ add_action( 'enqueue_block_assets', 'Kala\enqueue_block_assets' );
  */
 function preload_fonts() {
     $fonts = [
-        THEME_URI . '/fonts/lato-v20-latin-regular.woff2' => 'woff2',
-        THEME_URI . '/fonts/lato-v20-latin-700.woff2' => 'woff2',
+        THEME_URI . '/fonts/be-vietnam-pro-v8-latin-regular.woff2' => 'woff2',
+        THEME_URI . '/fonts/be-vietnam-pro-v8-latin-700.woff2' => 'woff2',
     ];
 
     foreach ( $fonts as $font_link => $font_type ) {
