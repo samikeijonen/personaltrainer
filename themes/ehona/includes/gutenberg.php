@@ -57,6 +57,11 @@ add_action( 'enqueue_block_editor_assets', 'Kala\gutenberg_styles' );
  */
 function gutenberg_setup() {
     remove_theme_support( 'core-block-patterns' );
+
+    // By adding the `theme.json` file block templates automatically get enabled.
+	// because the template editor will need additional QA and work to get right
+	// the default is to disable this feature.
+	remove_theme_support( 'block-templates' );
 }
 add_action( 'after_setup_theme', 'Kala\gutenberg_setup' );
 
