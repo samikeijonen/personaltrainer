@@ -1,8 +1,35 @@
 .site-footer {
     background-color: var(--wp--custom--color--blue);
     color: var(--wp--custom--color--neutral--white);
+    overflow: hidden;
     padding-bottom: var(--space-2xl-3xl);
     padding-top: var(--space-2xl-3xl);
+    position: relative;
+
+    @include media-min(navigation) {
+        min-height: 50rem;
+    }
+}
+
+.site-footer__svg svg {
+    bottom: 0;
+    left: 25%;
+    height: 150%;
+    object-fit: cover;
+    opacity: 0.05;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    z-index: 0;
+
+    @include media(navigation) {
+        display: none;
+    }
+}
+
+.site-footer__container {
+    position: relative;
+    z-index: 10;
 }
 
 .site-footer__text {

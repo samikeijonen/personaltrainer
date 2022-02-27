@@ -23,6 +23,9 @@
         </section>
 
         <footer class="site-footer x-padding">
+            <div class="site-footer__svg">
+                <?php Kala\display_svg( 'o-valkoinen', '/images/o-graphs/' ) ?>
+            </div>
             <div class="site-footer__container container alignwide top-margin top-margin--xl">
                 <div class="site-footer__text top-margin">
                     <?php
