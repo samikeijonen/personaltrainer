@@ -78,7 +78,7 @@ function post_type_professional() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => [ 'slug' => 'asiantuntija-kategoria' ],
+        'rewrite'           => [ 'slug' => 'asiantuntijat-kategoria' ],
         'show_in_rest'      => true,
     ];
 
@@ -157,7 +157,7 @@ function post_type_reference() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => [ 'slug' => 'asiakastarina-kategoria' ],
+        'rewrite'           => [ 'slug' => 'tarinat-kategoria' ],
         'show_in_rest'      => true,
     ];
 

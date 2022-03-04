@@ -7,6 +7,7 @@ object {
 
 /* Make sure images are scaled correctly. */
 img {
+    border-radius: 0.25rem;
     height: auto;
     max-width: 100%;
     /* Removes the whitespace under img, safer than `display: block;`. */

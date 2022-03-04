@@ -10,6 +10,6 @@
 $entry_categories = get_the_category_list( ', ' );
 ?>
 
-<p class="entry__meta">
+<p class="entry__meta has-text-align-center">
     <span class="entry__meta-date"><?php Kala\date_with_time_tag(); ?></span>
 </p>
