@@ -119,6 +119,11 @@
                             "slug": "sand-50",
                             "color": "var(--wp--custom--color--sand-50)",
                             "name": "Puuteri 50%"
+                        },
+                        {
+                            "slug": "blue-20",
+                            "color": "var(--wp--custom--color--blue-20)",
+                            "name": "Sininen 20%"
                         }
                     ]
                 }

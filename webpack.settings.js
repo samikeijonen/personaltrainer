@@ -1,7 +1,7 @@
 // Project settings, update if needed.
 const projectSettings = {
     projectURL: 'https://personaltrainertalo.local',
-    themePath: './themes/personaltrainertalo/',
+    themePath: './themes/ehona/',
 };
 
 // Project variables, do not update.
