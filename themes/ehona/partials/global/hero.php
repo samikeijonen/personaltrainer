@@ -21,7 +21,7 @@ if ( $content ) : ?>
             </div>
             <?php if ( $image_id ) : ?>
                 <figure class="hero__image">
-                    <?php echo wp_get_attachment_image( $image_id, 'kala-hero', '', [ 'loading' => 'eager', 'class' => 'cover-img' ] ); ?>
+                    <?php echo wp_get_attachment_image( $image_id, 'full', '', [ 'loading' => 'eager', 'class' => 'cover-img' ] ); ?>
                 </figure>
             <?php endif; ?>
         </div>

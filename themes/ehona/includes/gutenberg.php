@@ -95,6 +95,7 @@ function gutenberg_allowed_blocks( $allowed_blocks, $post ) {
         'core/columns',
         'core/shortcode',
         'wpforms/form-selector',
+        'leadin/hubspot-form-block',
     ];
 
     // Set MEOM ACF blocks.

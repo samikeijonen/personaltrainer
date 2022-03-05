@@ -40,8 +40,5 @@ function setup() {
             'social_links' => esc_html__( 'Social links', 'kala' ),
         ]
     );
-
-    add_image_size( 'kala-large', 912, 684, true );
-    add_image_size( 'kala-hero', 1800, 9999, false );
 }
 add_action( 'after_setup_theme', 'Kala\setup' );

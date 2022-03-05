@@ -3,7 +3,7 @@
 namespace MEOM\Blocks;
 
 $image_position = attr( 'imagePosition', $attributes, 'left' );
-$image_full     = attr( 'imageFull', $attributes, true );
+$image_full     = attr( 'imageFull', $attributes, false );
 $bg_color       = attr( 'backgroundColor', $attributes, 'green-light' );
 $image          = attr( 'image', $attributes, null );
 $class_name     = attr( 'className', $attributes, '' );

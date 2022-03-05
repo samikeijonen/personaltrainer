@@ -10,16 +10,6 @@ import block from './block.json';
 
 const BLOCK_SLUG = 'group';
 
-const ALLOWED_BLOCKS = [
-    'core/buttons',
-    'core/columns',
-    'core/paragraph',
-    'core/heading',
-    'core/image',
-    'meomblocks/latest-posts',
-    'meomblocks/social-links',
-];
-
 export default registerBlockType(block.name, {
     edit: (props) => {
         const {
@@ -35,7 +25,6 @@ export default registerBlockType(block.name, {
         });
 
         const innerBlocksProps = useInnerBlocksProps(blockProps, { // eslint-disable-line
-            allowedBlocks: ALLOWED_BLOCKS,
             renderAppender: InnerBlocks.ButtonBlockAppender,
         });
 
