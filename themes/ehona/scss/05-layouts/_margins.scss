@@ -58,6 +58,10 @@
     margin-top: var(--space-2xl-3xl);
 }
 
+.latest-posts + .wp-block-buttons {
+    margin-top: var(--space-2xl);
+}
+
 // Set all alignfull elements margin-top to zero, if they are first block.
 .content-area > .alignfull:first-child,
 .content-area .has-background + .has-background,
