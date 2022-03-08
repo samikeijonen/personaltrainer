@@ -11,11 +11,12 @@
     z-index: 110;
 
     svg {
-        height: 55px;
-        width: 176px;
+        height: 39px;
+        width: 123px;
 
         @include media-min(navigation) {
-            max-width: 10rem;
+            height: 55px;
+            width: 176px;
         }
     }
 }
