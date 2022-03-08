@@ -11,8 +11,8 @@
     z-index: 110;
 
     svg {
-        height: auto;
-        max-width: 7rem;
+        height: 55px;
+        width: 176px;
 
         @include media-min(navigation) {
             max-width: 10rem;
