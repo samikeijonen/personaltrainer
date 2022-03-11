@@ -8,10 +8,13 @@
 
 use function Kala\display_svg;
 
-$image_id    = Kala\get_variable( $image_id );
-$content     = Kala\get_variable( $content );
-$extra_class = Kala\get_variable( $extra_class );
-$class       = 'hero cover-bg content-row alignfull ' . $extra_class;
+$image_id       = Kala\get_variable( $image_id );
+$image_position = Kala\get_variable( $image_position );
+$content        = Kala\get_variable( $content );
+$extra_class    = Kala\get_variable( $extra_class );
+
+$image_position_class = ' has-img-position-' . $image_position;
+$class = 'hero cover-bg content-row alignfull ' . $extra_class . $image_position_class;
 
 if ( $content ) : ?>
     <div class="<?php echo esc_html( $class ); ?>">

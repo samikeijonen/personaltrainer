@@ -265,10 +265,12 @@ ul.wp-block-social-links {
     }
 
     a {
+        align-items: center;
         background-color: var(--wp--custom--color--orange);
         color: var(--wp--custom--color--neutral--white);
         border-radius: 50%;
-        display: block;
+        display: flex;
+        justify-content: center;
         padding: var(--space-xs);
 
         &:hover,

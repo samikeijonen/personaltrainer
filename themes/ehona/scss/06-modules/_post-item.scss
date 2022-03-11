@@ -15,6 +15,17 @@
     }
 }
 
+.post-item__link {
+    color: var(--wp--custom--color--blue);
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--wp--custom--color--blue);
+        text-decoration: underline;
+    }
+}
+
 .post-item__fig {
     margin: 0;
 }

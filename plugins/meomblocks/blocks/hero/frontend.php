@@ -4,13 +4,10 @@ namespace MEOM\Blocks;
 
 use Kala;
 
-$image       = attr( 'image', $attributes, null );
-$style       = attr( 'style', $attributes, 'setting_1' );
-$extra_class = attr( 'className', $attributes, '' );
-$content     = $content;
-
-// Build extra classes from attributes.
-$extra_class .= 'hero--style-' . $style;
+$image          = attr( 'image', $attributes, null );
+$image_position = attr( 'imagePosition', $attributes, 'center' );
+$extra_class    = attr( 'className', $attributes, '' );
+$content        = $content;
 
 // Render hero from theme, if available.
 $theme_partial = 'partials/global/hero';
@@ -18,10 +15,10 @@ if ( $content && function_exists( 'Kala\render_partial' ) && file_exists( get_te
     Kala\render_partial(
         $theme_partial,
         array(
-            'image_id'    => $image['id'],
-            'style'       => $style,
-            'content'     => $content,
-            'extra_class' => $extra_class,
+            'image_id'       => $image['id'],
+            'image_position' => $image_position,
+            'content'        => $content,
+            'extra_class'    => $extra_class,
         )
     );
     // Backup rendering, markup might be outdated.
