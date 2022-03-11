@@ -86,6 +86,7 @@ function social_links_icons() {
         'instagram.com' => 'instagram',
         'twitter.com'   => 'twitter',
         'youtube.com'   => 'youtube',
+        'linkedin.com'  => 'linkedin',
     );
 
     return $social_links_icons;

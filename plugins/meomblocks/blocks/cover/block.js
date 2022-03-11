@@ -8,6 +8,7 @@ const { InnerBlocks, useBlockProps, useInnerBlocksProps } = wp.blockEditor;
  */
 import block from './block.json';
 import ImageSelect from '../../components/image-select';
+import Sidebar from './components/sidebar';
 
 const ALLOWED_BLOCKS = ['core/paragraph', 'core/heading', 'core/buttons'];
 
@@ -19,7 +20,7 @@ const TEMPLATE = [
 export default registerBlockType(block.name, {
     edit: (props) => {
         const {
-            attributes: { image },
+            attributes: { image, imagePosition },
             setAttributes,
         } = props;
 
@@ -27,6 +28,7 @@ export default registerBlockType(block.name, {
             cover: true,
             'cover-bg': true,
             alignfull: true,
+            [`has-img-position-${imagePosition}`]: true,
             'content-row': true,
             'x-padding': true,
             'has-background': true,
@@ -49,6 +51,7 @@ export default registerBlockType(block.name, {
 
         return (
             <div {...blockProps}>
+                <Sidebar {...props} />
                 <div className={`cover__container container alignregular`}>
                     <div {...innerBlocksProps}></div>
                     <figure className={`cover__image`}>

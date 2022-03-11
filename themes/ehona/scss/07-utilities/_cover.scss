@@ -10,13 +10,17 @@
     z-index: 0;
 }
 
+.has-img-position-top .cover-img {
+    object-position: top center;
+}
+
 .cover-bg::before {
     background-color: var(--wp--custom--color--blue);
     bottom: 0;
     content: "";
     height: 100%;
     left: 0;
-    opacity: 0.7;
+    opacity: 0.3;
     position: absolute;
     right: 0;
     top: 0;

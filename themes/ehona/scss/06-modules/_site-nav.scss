@@ -57,6 +57,12 @@
     padding: var(--space-xs) 0;
     text-decoration: none;
 
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--wp--custom--color--orange);
+    }
+
     &:focus {
         outline-color: var(--wp--custom--color--orange);
     }
@@ -84,6 +90,14 @@
 .menu-item [aria-current="page"] {
     color: var(--wp--custom--color--orange);
     text-decoration: underline;
+}
+
+.menu-item--social-link {
+    margin-top: var(--space-m);
+
+    @include media-min(navigation) {
+        display: none;
+    }
 }
 
 .sub-menu {
@@ -136,7 +150,7 @@
     background-color: transparent;
     border: 0;
     border-radius: 0;
-    color: var(--wp--custom--color--neutral--white);
+    color: var(--wp--custom--color--lime);
     left: var(--space-2xs);
     line-height: 1;
     padding: var(--space-2xs);
@@ -167,7 +181,7 @@
 .site-nav__toggle-box-inner,
 .site-nav__toggle-box-inner::after,
 .site-nav__toggle-box-inner::before {
-    background-color: var(--wp--custom--color--neutral--white);
+    background-color: var(--wp--custom--color--lime);
     display: block;
     height: 1px;
     position: absolute;

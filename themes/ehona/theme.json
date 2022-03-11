@@ -127,6 +127,17 @@
                         }
                     ]
                 }
+            },
+            "core/heading": {
+                "color": {
+                    "palette": [
+                        {
+                            "slug": "orange",
+                            "color": "var(--wp--custom--color--orange)",
+                            "name": "Oranssi"
+                        }
+                    ]
+                }
             }
         }
     }

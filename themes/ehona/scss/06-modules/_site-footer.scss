@@ -41,6 +41,12 @@
     color: var(--wp--custom--color--neutral--white);
 }
 
+.site-footer__text a:hover,
+.site-footer__text a:active,
+.site-footer__text a:focus {
+    color: var(--wp--custom--color--orange);
+}
+
 .site-footer__text h2 {
     font-size: var(--wp--custom--text--step-0);
 }

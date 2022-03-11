@@ -2,13 +2,15 @@
 
 namespace MEOM\Blocks;
 
-$image   = attr( 'image', $attributes, null );
-$content = remove_empty_tags_recursive( $content );
+$image          = attr( 'image', $attributes, null );
+$image_position = attr( 'imagePosition', $attributes, 'center' );
+$content        = remove_empty_tags_recursive( $content );
 
 $class_names = [
     'cover',
     'cover-bg',
     'alignfull',
+    'has-img-position-' . $image_position,
     'content-row',
     'x-padding',
     'has-background',
