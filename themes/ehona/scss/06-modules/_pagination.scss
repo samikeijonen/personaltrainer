@@ -3,17 +3,29 @@
 }
 
 .nav-links {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-2xs);
+    gap: var(--space-s);
     justify-content: center;
 }
 
 .page-numbers {
+    background-color: var(--wp--custom--color--blue);
+    border-radius: 0.25rem;
+    color: var(--wp--custom--color--neutral--white);
     display: block;
     padding: var(--space-2xs) var(--space-xs);
     line-height: 1;
     text-align: center;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--wp--custom--color--orange);
+        color: var(--wp--custom--color--neutral--white);
+    }
 
     &.prev,
     &.next {
@@ -25,7 +37,6 @@
     }
 
     &.current {
-        background-color: var(--wp--custom--color--theme--beige);
-        color: var(--wp--custom--color--grey--500);
+        background-color: var(--wp--custom--color--orange);
     }
 }
