@@ -13,21 +13,20 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+select {
+    background-color: var(--wp--custom--color--neutral--white);
     border: 1px solid var(--wp--custom--color--grey--700);
+    border-radius: 0;
     padding: var(--space-2xs);
     width: 100%;
 }
 
 select {
-    line-height: 1.5;
-    // appearance: none;
-    height: 2.8rem;
-    border: 1px solid var(--wp--custom--color--grey--700);
-    padding: var(--space-2xs);
-    width: 100%;
-    border-radius: 0;
-    background: transparent;
+    appearance: none;
+    background-image: url(../images/icons/arrow-down-black.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem top 50%;
 }
 
 textarea {
@@ -43,4 +42,5 @@ input[type="radio"] {
 
 label {
     display: block;
+    font-weight: 700;
 }

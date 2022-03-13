@@ -33,6 +33,21 @@ function theme_archive_title( $title ) {
 add_filter( 'get_the_archive_title', 'Kala\theme_archive_title' );
 
 /**
+ * Use content in the home page description.
+ *
+ * @param string $description The description for the archive.
+ * @return string
+ */
+function theme_archive_description( $description ) {
+    if ( is_home() && ! is_front_page() ) {
+        $description = apply_filters( 'the_content', get_post_field( 'post_content', get_queried_object_id(), 'raw' ) );
+    }
+
+    return $description;
+}
+add_filter( 'get_the_archive_description', 'Kala\theme_archive_description' );
+
+/**
  * Automatically skip the default assigned slug on any attachment.
  * So an attachment that might normally get the slug "services" will now get the slug "services-2".
  */

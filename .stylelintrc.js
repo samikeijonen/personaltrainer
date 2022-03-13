@@ -7,12 +7,12 @@ module.exports = {
         "at-rule-no-unknown": null,
         "comment-empty-line-before": null,
         "declaration-property-unit-allowed-list": null,
-        "max-line-length": 140,
+        "max-line-length": 160,
         "no-descending-specificity": null,
         "rule-empty-line-before": null,
         "selector-class-pattern": null,
-        "no-invalid-double-slash-comments": null,
-        "function-calc-no-invalid": null,
+        "no-invalid-position-at-import-rule": null,
+        "value-keyword-case": null,
         "function-url-quotes": null,
     }
 };
