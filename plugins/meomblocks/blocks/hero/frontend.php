@@ -6,6 +6,7 @@ use Kala;
 
 $image          = attr( 'image', $attributes, null );
 $image_position = attr( 'imagePosition', $attributes, 'center' );
+$video_url      = attr( 'videoUrl', $attributes, null );
 $extra_class    = attr( 'className', $attributes, '' );
 $content        = $content;
 
@@ -14,12 +15,13 @@ $theme_partial = 'partials/global/hero';
 if ( $content && function_exists( 'Kala\render_partial' ) && file_exists( get_template_directory() . '/' . $theme_partial . '.php' ) ) :
     Kala\render_partial(
         $theme_partial,
-        array(
+        [
             'image_id'       => $image['id'],
             'image_position' => $image_position,
+            'video_url'      => $video_url,
             'content'        => $content,
             'extra_class'    => $extra_class,
-        )
+        ]
     );
     // Backup rendering, markup might be outdated.
 elseif ( $content ) :

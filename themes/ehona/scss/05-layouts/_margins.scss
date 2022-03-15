@@ -14,11 +14,11 @@
     margin-top: var(--space-xl);
 }
 
-.top-margin--md > * + * {
+.top-margin--m > * + * {
     margin-top: var(--space-m);
 }
 
-.top-margin--sm > * + * {
+.top-margin--s > * + * {
     margin-top: var(--space-s);
 }
 

@@ -21,6 +21,24 @@ while ( have_posts() ) :
         <div class="entry__meta">
             <?php Kala\display_terms( [ 'sep' => '' ] ) ?>
         </div>
+
+        <?php
+        $author_id   = get_the_author_meta( 'ID' );
+        $author_desc = get_the_author_meta( 'description' );
+        ?>
+        <div class="profile">
+            <figure class="profile__img aspect-ratio aspect-ratio--1-1">
+                <?php echo get_avatar( $author_id, 140); // phpcs:ignore ?>
+            </figure>
+        
+            <div class="profile__content top-margin top-margin--s">
+                <h2 class="profile__title h4"><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></h2> 
+
+                <?php if ( $author_desc ) : ?>
+                    <p class="profile__desc"><?php echo esc_html( $author_desc ); ?></p> 
+                <?php endif; ?>   
+            </div>
+        </div>
     </article>
 
     <?php

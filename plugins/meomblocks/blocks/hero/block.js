@@ -20,7 +20,7 @@ const TEMPLATE = [
 export default registerBlockType(block.name, {
     edit: (props) => {
         const {
-            attributes: { image, imagePosition },
+            attributes: { image, imagePosition, videoUrl },
             setAttributes,
         } = props;
 
@@ -52,15 +52,31 @@ export default registerBlockType(block.name, {
                 <Sidebar {...props} />
                 <div className={`hero__container container x-padding`}>
                     <div {...innerBlocksProps}></div>
-                    <figure className={`hero__image`}>
-                        <ImageSelect
-                            image={image}
-                            classes="cover-img"
-                            onChange={(newImage) =>
-                                setAttributes({ image: newImage })
-                            }
-                        />
-                    </figure>
+
+                    {videoUrl ? (
+                        <div className="hero__video">
+                            <video
+                                className="cover-img"
+                                muted
+                                playsinline
+                                autoPlay
+                                loop
+                                width="1280"
+                                height="720"
+                                src={videoUrl}
+                            ></video>
+                        </div>
+                    ) : (
+                        <figure className={`hero__image`}>
+                            <ImageSelect
+                                image={image}
+                                classes="cover-img"
+                                onChange={(newImage) =>
+                                    setAttributes({ image: newImage })
+                                }
+                            />
+                        </figure>
+                    )}
                 </div>
             </div>
         );

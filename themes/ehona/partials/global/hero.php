@@ -10,6 +10,7 @@ use function Kala\display_svg;
 
 $image_id       = Kala\get_variable( $image_id );
 $image_position = Kala\get_variable( $image_position );
+$video_url      = Kala\get_variable( $video_url );
 $content        = Kala\get_variable( $content );
 $extra_class    = Kala\get_variable( $extra_class );
 
@@ -22,7 +23,11 @@ if ( $content ) : ?>
             <div class="hero__content top-margin">
                 <?php echo do_blocks( $content ); // phpcs:ignore ?>
             </div>
-            <?php if ( $image_id ) : ?>
+            <?php if ( $video_url ) : ?>
+            <div class="hero__video">
+                <video class="cover-img" muted playsinline autoplay loop width="1280" height="720" src="<?php echo esc_url( $video_url ); ?>"></video>
+            </div>
+            <?php elseif ( $image_id ) : ?>
                 <figure class="hero__image">
                     <?php echo wp_get_attachment_image( $image_id, 'full', '', [ 'loading' => 'eager', 'class' => 'cover-img' ] ); ?>
                 </figure>

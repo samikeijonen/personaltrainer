@@ -39,8 +39,16 @@ add_filter( 'get_the_archive_title', 'Kala\theme_archive_title' );
  * @return string
  */
 function theme_archive_description( $description ) {
+    // Coming from resuble block named `tarina-kuvaus`
+    $reference_desc    = get_page_by_path( 'kokemukset-kuvaus', '', 'wp_block' );
+    $professional_desc = get_page_by_path( 'asiantuntijat-kuvaus', '', 'wp_block' );
+
     if ( is_home() && ! is_front_page() ) {
         $description = apply_filters( 'the_content', get_post_field( 'post_content', get_queried_object_id(), 'raw' ) );
+    } elseif ( is_post_type_archive( 'reference' ) && $reference_desc ) {
+        $description = apply_filters( 'the_content', get_the_content( null, false, absint( $reference_desc->ID ) ) ); // phpcs:ignore
+    } elseif ( is_post_type_archive( 'professional' ) && $professional_desc ) {
+        $description = apply_filters( 'the_content', get_the_content( null, false, absint( $professional_desc->ID ) ) ); // phpcs:ignore
     }
 
     return $description;
