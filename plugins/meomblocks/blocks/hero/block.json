@@ -14,6 +14,9 @@
 		"imagePosition": {
 			"type": "string",
 			"default": "center"
+		},
+		"videoUrl": {
+			"type": "string"
 		}
 	}
 }

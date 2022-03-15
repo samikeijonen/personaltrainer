@@ -1,10 +1,10 @@
 const { __ } = wp.i18n;
-const { PanelBody, RadioControl } = wp.components;
+const { PanelBody, RadioControl, TextControl } = wp.components;
 const { InspectorControls } = wp.blockEditor;
 
 const Sidebar = (props) => {
     const {
-        attributes: { imagePosition },
+        attributes: { imagePosition, videoUrl },
         setAttributes,
     } = props;
     return (
@@ -28,6 +28,15 @@ const Sidebar = (props) => {
                     ]}
                     onChange={(newImagePosition) => {
                         setAttributes({ imagePosition: newImagePosition });
+                    }}
+                />
+
+                <TextControl
+                    label={__('Videon URL', 'meom-blocks')}
+                    help={__('Video syrjäyttää Heron kuvan.', 'meom-blocks')}
+                    value={videoUrl}
+                    onChange={(newVideoUrl) => {
+                        setAttributes({ videoUrl: newVideoUrl });
                     }}
                 />
             </PanelBody>

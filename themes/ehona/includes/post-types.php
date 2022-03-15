@@ -106,7 +106,7 @@ function post_type_reference() {
     ];
 
     $rewrite = [
-        'slug'       => 'tarinat',
+        'slug'       => 'kokemukset',
         'with_front' => true,
         'pages'      => true,
         'feeds'      => true,
@@ -157,7 +157,7 @@ function post_type_reference() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => [ 'slug' => 'tarinat-kategoria' ],
+        'rewrite'           => [ 'slug' => 'kokemukset-kategoria' ],
         'show_in_rest'      => true,
     ];
 
