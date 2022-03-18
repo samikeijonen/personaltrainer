@@ -15,9 +15,6 @@ while ( have_posts() ) :
         <?php
             get_template_part( 'partials/post/entry-meta' );
             ?>
-            <div class="entry__meta">
-                <?php Kala\display_terms( [ 'sep' => '' ] ) ?>
-            </div>
 
             <?php
             $author_id   = get_the_author_meta( 'ID' );
@@ -38,6 +35,10 @@ while ( have_posts() ) :
             </div>
 
         <?php the_content(); ?>
+
+        <div class="entry__meta mt-2xl">
+            <?php Kala\display_terms( [ 'sep' => '' ] ) ?>
+        </div>
     </article>
 
     <?php
