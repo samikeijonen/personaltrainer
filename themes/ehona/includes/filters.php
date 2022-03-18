@@ -114,3 +114,21 @@ function social_links_icons() {
 
     return $social_links_icons;
 }
+
+/**
+ * Skip lazy loading for first 3 images on home and archive.
+ *
+ * @param  int  $omit_threshold The number of media elements where the `loading` attribute will not be added.
+ * @return int  $omit_threshold Mofified value.
+ */
+function skip_lazyloading_on_first_three_archive_images( $omit_threshold ) {
+    if ( is_home() || is_archive() ) {
+        return 3;
+    }
+
+    return $omit_threshold;
+}
+add_filter( 'wp_omit_loading_attr_threshold', 'Kala\skip_lazyloading_on_first_three_archive_images' );
+
+// Disable wpforms email suggestions.
+add_filter( 'wpforms_mailcheck_enabled', '__return_false' );

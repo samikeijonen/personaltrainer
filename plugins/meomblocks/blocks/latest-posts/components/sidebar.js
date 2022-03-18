@@ -1,5 +1,5 @@
 const { __ } = wp.i18n;
-const { PanelBody, SelectControl, RadioControl } = wp.components;
+const { PanelBody, RadioControl } = wp.components;
 const { InspectorControls } = wp.blockEditor;
 
 /**
@@ -16,7 +16,7 @@ const Sidebar = (props) => {
     return (
         <InspectorControls>
             <PanelBody title={__('Settings', 'meomblocks')} initialOpen={true}>
-                <SelectControl
+                <RadioControl
                     label={__('Select post type', 'meomblocks')}
                     selected={postType}
                     options={[
