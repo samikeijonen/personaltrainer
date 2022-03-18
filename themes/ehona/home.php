@@ -12,8 +12,8 @@ get_header();
 
 <div class="content-area">
     <?php
-    the_archive_title( '<h1 class="entry-title has-text-align-center">', '</h1>' );
-    the_archive_description( '<div class="archive-description has-text-align-center">', '</div>' );
+    the_archive_title( '<h1 class="entry-title has-text-align-center alignwide">', '</h1>' );
+    the_archive_description( '<div class="archive-description has-text-align-center top-margin top-margin--s">', '</div>' );
 
     if ( have_posts() ) : ?>
         <div class="grid has-3-columns content-row alignwide">
