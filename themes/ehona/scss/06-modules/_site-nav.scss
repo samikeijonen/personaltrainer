@@ -107,7 +107,7 @@
     opacity: 0;
     position: absolute;
     transform: translateY(-10%);
-    transition: transform var(--wp--custom--transition--3), opacity var(--wp--custom--transition--3);
+    transition: transform var(--wp--custom--transition--3);
     visibility: hidden;
 
     @include media(navigation) {
