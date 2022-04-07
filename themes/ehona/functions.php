@@ -19,6 +19,7 @@ require_once 'includes/helpers.php';
 require_once 'includes/filters.php';
 require_once 'includes/filters-nav.php';
 require_once 'includes/post-types.php';
+require_once 'includes/page-speed.php';
 
 /**
  * Setup theme.
