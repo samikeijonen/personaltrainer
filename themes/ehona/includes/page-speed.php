@@ -8,7 +8,7 @@
 namespace Kala;
 
 /**
- * Delay JS by changing `src=` to `delay=` in GTM and Cookibot.
+ * Delay JS by changing `src=` to `delay=` in GTM and Cookiebot.
  *
  * @link https://blog.speedvitals.com/delay-javascript/
  *
