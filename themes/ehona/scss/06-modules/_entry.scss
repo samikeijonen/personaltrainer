@@ -8,6 +8,10 @@
     gap: var(--space-xs);
     justify-content: center;
 
+    > li {
+        display: flex;
+    }
+
     a {
         background-color: var(--wp--custom--color--blue-20);
         border-radius: 0.125rem;
@@ -19,7 +23,8 @@
 
         &:hover,
         &:active,
-        &:focus {
+        &:focus,
+        &[aria-current="page"] {
             background-color: var(--wp--custom--color--blue);
             color: var(--wp--custom--color--neutral--white);
         }
