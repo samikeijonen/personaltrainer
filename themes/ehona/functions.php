@@ -38,6 +38,7 @@ function setup() {
         [
             'main'         => esc_html__( 'Main', 'kala' ),
             'social_links' => esc_html__( 'Social links', 'kala' ),
+            'categories'   => esc_html__( 'Blog categories', 'kala' ),
         ]
     );
 }

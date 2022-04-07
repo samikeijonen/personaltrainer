@@ -26,10 +26,27 @@
     }
 }
 
+.post-item__terms {
+    font-size: var(--wp--custom--text--step-m-1);
+
+    a {
+        position: relative;
+        text-decoration: none;
+        z-index: 10;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: var(--wp--custom--color--blue);
+            text-decoration: underline;
+        }
+    }
+}
+
 .post-item__fig {
     margin: 0;
 }
 
 .post-item__content {
-    margin-top: var(--space-m);
+    margin-top: var(--space-s);
 }

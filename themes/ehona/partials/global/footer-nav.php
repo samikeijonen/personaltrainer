@@ -10,7 +10,7 @@ if ( ! has_nav_menu( 'footer' ) ) :
 endif;
 ?>
 
-<nav class="footer-navv" aria-label="<?php esc_attr_e( 'Footer', 'kala' ); ?>">
+<nav class="footer-nav" aria-label="<?php esc_attr_e( 'Footer', 'kala' ); ?>">
     <?php
         wp_nav_menu(
             [

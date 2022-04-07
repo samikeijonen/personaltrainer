@@ -13,6 +13,11 @@ get_header();
 <div class="content-area">
     <?php
     the_archive_title( '<h1 class="entry-title has-text-align-center alignwide">', '</h1>' );
+    
+    if ( is_home() || is_category() ) :
+        get_template_part( 'partials/global/categories-nav' );
+    endif;
+    
     the_archive_description( '<div class="archive-description has-text-align-center top-margin top-margin--s">', '</div>' );
 
     if ( have_posts() ) : ?>
