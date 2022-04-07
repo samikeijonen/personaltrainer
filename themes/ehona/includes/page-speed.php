@@ -1,6 +1,6 @@
 <?php
 /**
- * General filters used in the theme
+ * Page speed features.
  *
  * @package Kala
  */
