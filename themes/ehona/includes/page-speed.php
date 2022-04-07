@@ -28,6 +28,7 @@ add_filter( 'mtps_cookiebot_code', 'Kala\delay_js', 10, 2 );
 function print_delay_js() {
     ?>
     <script>
+        var delayLoaded = false;
         var autoLoadDuration = 5;
         var eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"];
 
@@ -46,19 +47,23 @@ function print_delay_js() {
         }
 
         function runScripts() {
-            document.querySelectorAll("script[data-cookieconsent]").forEach(function(scriptTag) {
-                <?php // Create new script tag and replace "delay=" with "src=". ?>
-                var newNode = document.createElement('script');
-                newNode.setAttribute("data-cookieconsent", "ignore");
-                var newContent = scriptTag.textContent.replace("delay=", "src=");
-                newNode.textContent = newContent;
-                scriptTag.parentNode.replaceChild(newNode, scriptTag);
-            });
+            if (!delayLoaded) {
+                document.querySelectorAll("script[data-cookieconsent]").forEach(function(scriptTag) {
+                    <?php // Create new script tag and replace "delay=" with "src=". ?>
+                    var newNode = document.createElement('script');
+                    newNode.setAttribute("data-cookieconsent", "ignore");
+                    var newContent = scriptTag.textContent.replace("delay=", "src=");
+                    newNode.textContent = newContent;
+                    scriptTag.parentNode.replaceChild(newNode, scriptTag);
+                });
 
-            document.querySelectorAll("script[delay]").forEach(function(scriptTag) {
-                <?php // Replace "delay=" with "src=" attribute. ?>
-                scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
-            });
+                document.querySelectorAll("script[delay]").forEach(function(scriptTag) {
+                    <?php // Replace "delay=" with "src=" attribute. ?>
+                    scriptTag.setAttribute("src", scriptTag.getAttribute("delay"));
+                });
+            }
+
+            delayLoaded = true;
         }
     </script>
     <?php
