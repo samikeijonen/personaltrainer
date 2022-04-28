@@ -69,3 +69,15 @@ function preload_fonts() {
     }
 }
 add_action( 'wp_head', 'Kala\preload_fonts', 1 );
+
+/**
+ * Facebook verification.
+ *
+ * @return void
+ */
+function facebook_verification() {
+    ?>
+    <meta name="facebook-domain-verification" content="rfpczpv8grp9pw8dd977qovwpm79zn" />
+    <?php
+}
+add_action( 'wp_head', 'Kala\facebook_verification' );
