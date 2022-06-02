@@ -12,7 +12,7 @@ const Sidebar = (props) => {
         <InspectorControls>
             <PanelBody title={__('Settings', 'meomblocks')} initialOpen={true}>
                 <RadioControl
-                    label={__('Select column count', 'meomblocks')}
+                    label={__('Select column count in a row', 'meomblocks')}
                     selected={columnCount}
                     options={[
                         {
