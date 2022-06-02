@@ -58,9 +58,9 @@ export default registerBlockType(block.name, {
             },
             {
                 allowedBlocks: ALLOWED_BLOCKS,
-                /*renderAppender: hasChildBlocks
+                renderAppender: hasChildBlocks
                     ? undefined
-                    : InnerBlocks.ButtonBlockAppender,*/
+                    : InnerBlocks.ButtonBlockAppender,
             }
         );
 
