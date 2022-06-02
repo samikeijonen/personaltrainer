@@ -21,6 +21,12 @@
         },
         {
             "slug": "group"
+        },
+        {
+            "slug": "columns"
+        },
+        {
+            "slug": "column"
         }
     ],
     "acf_blocks": {}
