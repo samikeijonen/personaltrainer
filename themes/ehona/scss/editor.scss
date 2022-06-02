@@ -135,3 +135,8 @@ body .editor-styles-wrapper {
 .editor-styles-wrapper.editor-styles-wrapper ol {
     box-sizing: border-box;
 }
+
+.has-child-selected {
+    border: 1px dashed;
+    padding: 0.5rem;
+}

@@ -24,7 +24,7 @@
     "classnames": "^2.3.1"
   },
   "devDependencies": {
-    "@meom/scripts": "^2.0.0"
+    "@meom/scripts": "^3.0.0"
   },
   "scripts": {
     "build": "wp-scripts build --webpack-no-externals",
